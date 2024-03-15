@@ -31,20 +31,20 @@ public class CandidateProfilesDAOImpl implements CandidateProfilesDAO {
 
 	@Override
 	public void updateCandidateProfiles(CandidateProfiles candidate) {
-		// TODO Auto-generated method stub
+		entityManager.unwrap(Session.class).merge(candidate);
 		
 	}
 
 	@Override
-	public void deleteCandidateProfiles(int candidateId) {
-		// TODO Auto-generated method stub
+	public void deleteCandidateProfiles(CandidateProfiles candidateId) {
+		entityManager.unwrap(Session.class).remove(candidateId);
 		
 	}
 
 	@Override
 	public CandidateProfiles getCandidateProfilesById(int candidateId) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return entityManager.unwrap(Session.class).get(CandidateProfiles.class, candidateId);
 	}
 
 }

@@ -21,25 +21,25 @@ public class EmployeeManagersServiceImpl  implements EmployeeManagersService{
 	@Override
 	public void addEmployeeManager(EmployeeManagers employeeManager) {
 		// TODO Auto-generated method stub
-		employeeManagersDAO.addEmployeeManagers(employeeManager);
+		employeeManagersDAO.addEmployeeManager(employeeManager);
 	}
 
 	@Override
 	public void updateEmployeeManager(EmployeeManagers employeeManager) {
 		// TODO Auto-generated method stub
-		
+		employeeManagersDAO.updateEmployeeManager(employeeManager);
 	}
 
 	@Override
-	public void deleteEmployeeManager(int employeeManagerId) {
+	public void deleteEmployeeManager(EmployeeManagers employeeManagerId) {
 		// TODO Auto-generated method stub
-		
+		employeeManagersDAO.deleteEmployeeManager(employeeManagerId);
 	}
 
 	@Override
 	public EmployeeManagers getEmployeeManagerById(int employeeManagerId) {
 		// TODO Auto-generated method stub
-		return null;
+		return 		employeeManagersDAO.getEmployeeManagerById(employeeManagerId);
 	}
 
 }

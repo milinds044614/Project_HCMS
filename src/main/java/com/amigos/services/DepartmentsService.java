@@ -12,7 +12,7 @@ public interface DepartmentsService {
 
 	void updateDepartment(Departments department);
 
-	void deleteDepartment(int departmentId);
+	void deleteDepartment(Departments departmentId);
 
 	Departments getDepartmentById(int departmentId);
 

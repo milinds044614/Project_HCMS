@@ -7,14 +7,14 @@ import com.amigos.entities.ExternalTrainers;
 
 
 public interface ExternalTrainersDAO {
-	List<ExternalTrainers> getAllExternalTrainersDAO();
+	List<ExternalTrainers> getAllExternalTrainers();
 
-	void addExternalTrainers(ExternalTrainersDAO ExternalTrainer);
+	void addExternalTrainer(ExternalTrainers ExternalTrainer);
 
-	void updateExternalTrainers(ExternalTrainersDAO ExternalTrainer);
+	void updateExternalTrainer(ExternalTrainers ExternalTrainer);
 
-	void deleteExternalTrainers(int ExternalTrainerId);
+	void deleteExternalTrainer(ExternalTrainers ExternalTrainerId);
 
-	ExternalTrainersDAO getExternalTrainersById(int ExternalTrainerId);
+	ExternalTrainers getExternalTrainerById(int ExternalTrainerId);
 
 }

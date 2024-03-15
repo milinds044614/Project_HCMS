@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.amigos.entities.ApplicationStatus;
-import com.amigos.entities.Employees;
+
 
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
@@ -33,20 +33,20 @@ public class ApplicationStatusDAOImpl implements ApplicationStatusDAO {
 
 	@Override
 	public void updateApplicationStatus(ApplicationStatus applicationStatus) {
-		// TODO Auto-generated method stub
+		entityManager.unwrap(Session.class).merge(applicationStatus);
 		
 	}
 
 	@Override
-	public void deleteApplicationStatus(int applicationStatusId) {
-		// TODO Auto-generated method stub
+	public void deleteApplicationStatus(ApplicationStatus obj) {
+		entityManager.unwrap(Session.class).remove(obj);
 		
 	}
 
 	@Override
 	public ApplicationStatus getApplicationStatusById(int applicationStatusId) {
 		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(ApplicationStatus.class, applicationStatusId);
 	}
 
 }

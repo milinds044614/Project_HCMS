@@ -3,6 +3,7 @@ package com.amigos.dao;
 import java.util.List;
 
 import com.amigos.entities.ApplicationStatus;
+import com.amigos.entities.Employees;
 
 public interface ApplicationStatusDAO {
 	List<ApplicationStatus> getAllApplicationStatus();
@@ -11,10 +12,11 @@ public interface ApplicationStatusDAO {
 
 	void updateApplicationStatus(ApplicationStatus applicationStatus);
 
-	void deleteApplicationStatus(int applicationStatusId);
+	void deleteApplicationStatus(ApplicationStatus obj);
 
 	ApplicationStatus getApplicationStatusById(int applicationStatusId);
 
+	
 	
 
 }

@@ -32,19 +32,19 @@ public class RolesDAOImpl implements RolesDAO {
 	@Override
 	public void updateRole(Roles role) {
 		// TODO Auto-generated method stub
-
+		entityManager.unwrap(Session.class).merge(role);
 	}
 
 	@Override
-	public void deleteRole(int roleId) {
+	public void deleteRole(Roles roleId) {
 		// TODO Auto-generated method stub
-
+		entityManager.unwrap(Session.class).remove(roleId);
 	}
 
 	@Override
 	public Roles getRoleById(int roleId) {
 		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(Roles.class, roleId);
 	}
 
 }

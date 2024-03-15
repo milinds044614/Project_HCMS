@@ -7,12 +7,12 @@ import com.amigos.entities.ExternalTrainers;
 public interface ExternalTrainersService {
 	List<ExternalTrainers> getAllExternalTrainers();
 
-	void addExternalTrainers(ExternalTrainers ExternalTrainer);
+	void addExternalTrainer(ExternalTrainers ExternalTrainer);
 
-	void updateExternalTrainers(ExternalTrainers ExternalTrainer);
+	void updateExternalTrainer(ExternalTrainers ExternalTrainer);
 
-	void deleteExternalTrainers(int ExternalTrainerId);
+	void deleteExternalTrainer(ExternalTrainers ExternalTrainerId);
 
-	ExternalTrainers getExternalTrainersById(int ExternalTrainerId);
+	ExternalTrainers getExternalTrainerById(int ExternalTrainerId);
 
 }

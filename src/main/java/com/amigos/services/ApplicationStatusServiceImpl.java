@@ -19,27 +19,27 @@ public class ApplicationStatusServiceImpl implements ApplicationStatusService{
 	}
 
 	@Override
-	public void addApplicationStatus(ApplicationStatus applicationStatu) {
+	public void addApplicationStatus(ApplicationStatus applicationStatus) {
 		// TODO Auto-generated method stub
-		applicationStatusDAO.addApplicationStatus(applicationStatu);
+		applicationStatusDAO.addApplicationStatus(applicationStatus);
 	}
 
 	@Override
 	public void updateApplicationStatus(ApplicationStatus applicationStatus) {
-		// TODO Auto-generated method stub
+		applicationStatusDAO.updateApplicationStatus(applicationStatus);
 		
 	}
 
 	@Override
-	public void deleteApplicationStatus(int applicationStatusId) {
-		// TODO Auto-generated method stub
+	public void deleteApplicationStatus(ApplicationStatus applicationStatus) {
+		applicationStatusDAO.deleteApplicationStatus(applicationStatus);
 		
 	}
 
 	@Override
 	public ApplicationStatus getApplicationStatusById(int applicationStatusId) {
-		// TODO Auto-generated method stub
-		return null;
+	
+		return applicationStatusDAO.getApplicationStatusById(applicationStatusId);
 	}
 
 }

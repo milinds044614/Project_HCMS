@@ -11,7 +11,7 @@ public interface CertificationsDAO {
 
 	void updateCertifications(Certifications certificate);
 
-	void deleteCertifications(int certificateId);
+	void deleteCertifications(Certifications certificateId);
 
 	Certifications getCertificationsById(int certificateId);
 

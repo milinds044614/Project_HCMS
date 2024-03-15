@@ -7,11 +7,11 @@ import com.amigos.entities.LeaveApprovals;
 public interface LeaveApprovalsDAO {
 	List<LeaveApprovals> getAllLeaveApprovals();
 
-	void addLeaveApprovals(LeaveApprovals LeaveApproval);
+	void addLeaveApproval(LeaveApprovals LeaveApproval);
 
-	void updateLeaveApprovals(LeaveApprovals LeaveApproval);
+	void updateLeaveApproval(LeaveApprovals LeaveApproval);
 
-	void deleteLeaveApprovals(int LeaveApprovalId);
+	void deleteLeaveApproval(LeaveApprovals LeaveApprovalId);
 
-	LeaveApprovals getLeaveApprovalsById(int LeaveApprovalId);
+	LeaveApprovals getLeaveApprovalById(int LeaveApprovalId);
 }

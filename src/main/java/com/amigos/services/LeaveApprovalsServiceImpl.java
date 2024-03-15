@@ -18,27 +18,27 @@ public class LeaveApprovalsServiceImpl implements LeaveApprovalsService{
 	}
 
 	@Override
-	public void addLeaveApprovals(LeaveApprovals LeaveApproval) {
+	public void addLeaveApproval(LeaveApprovals leaveApproval) {
 		// TODO Auto-generated method stub
-		leaveApprovalsDAO.addLeaveApprovals(LeaveApproval);
+		leaveApprovalsDAO.addLeaveApproval(leaveApproval);
 	}
 
 	@Override
-	public void updateLeaveApprovals(LeaveApprovals LeaveApproval) {
+	public void updateLeaveApproval(LeaveApprovals leaveApproval) {
 		// TODO Auto-generated method stub
-		
+		leaveApprovalsDAO.updateLeaveApproval(leaveApproval);
 	}
 
 	@Override
-	public void deleteLeaveApprovals(int LeaveApprovalId) {
+	public void deleteLeaveApproval(LeaveApprovals leaveApprovalId) {
 		// TODO Auto-generated method stub
-		
+		leaveApprovalsDAO.deleteLeaveApproval(leaveApprovalId);
 	}
 
 	@Override
-	public LeaveApprovals getLeaveApprovalsById(int LeaveApprovalId) {
+	public LeaveApprovals getLeaveApprovalById(int leaveApprovalId) {
 		// TODO Auto-generated method stub
-		return null;
+		return leaveApprovalsDAO.getLeaveApprovalById(leaveApprovalId);
 	}
 
 }

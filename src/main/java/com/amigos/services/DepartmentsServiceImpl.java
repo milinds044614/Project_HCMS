@@ -21,25 +21,25 @@ public class DepartmentsServiceImpl implements DepartmentsService {
 
 	@Override
 	public void addDepartment(Departments role) {
-		departmentsDAO.addDepartments(role);
+		departmentsDAO.addDepartment(role);
 	}
 
 	@Override
 	public void updateDepartment(Departments department) {
-		// TODO Auto-generated method stub
+		departmentsDAO.updateDepartment(department);
 
 	}
 
 	@Override
-	public void deleteDepartment(int departmentId) {
+	public void deleteDepartment(Departments departmentId) {
 		// TODO Auto-generated method stub
-
+		departmentsDAO.deleteDepartment(departmentId);
 	}
 
 	@Override
 	public Departments getDepartmentById(int departmentId) {
 		// TODO Auto-generated method stub
-		return null;
+		return departmentsDAO.getDepartmentById(departmentId);
 	}
 
 }

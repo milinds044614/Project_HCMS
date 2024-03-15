@@ -15,31 +15,31 @@ public class ExternalTrainersServiceImpl implements ExternalTrainersService {
 	@Override
 	public List<ExternalTrainers> getAllExternalTrainers() {
 		// TODO Auto-generated method stub
-		return externalTrainersDAO.getAllExternalTrainersDAO();
+		return externalTrainersDAO.getAllExternalTrainers();
 	}
 
 	@Override
-	public void addExternalTrainers(ExternalTrainers ExternalTrainer) {
+	public void addExternalTrainer(ExternalTrainers externalTrainer) {
 		// TODO Auto-generated method stub
-		externalTrainersDAO.addExternalTrainers(externalTrainersDAO);
+		externalTrainersDAO.addExternalTrainer(externalTrainer);
 	}
 
 	@Override
-	public void updateExternalTrainers(ExternalTrainers ExternalTrainer) {
+	public void updateExternalTrainer(ExternalTrainers externalTrainer) {
 		// TODO Auto-generated method stub
-		
+		externalTrainersDAO.updateExternalTrainer(externalTrainer);
 	}
 
 	@Override
-	public void deleteExternalTrainers(int ExternalTrainerId) {
+	public void deleteExternalTrainer(ExternalTrainers externalTrainerId) {
 		// TODO Auto-generated method stub
-		
+		externalTrainersDAO.deleteExternalTrainer(externalTrainerId);
 	}
 
 	@Override
-	public ExternalTrainers getExternalTrainersById(int ExternalTrainerId) {
+	public ExternalTrainers getExternalTrainerById(int externalTrainerId) {
 		// TODO Auto-generated method stub
-		return null;
+		return externalTrainersDAO.getExternalTrainerById(externalTrainerId);
 	}
 
 }

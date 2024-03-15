@@ -20,8 +20,9 @@ public class EmployeesDAOImpl implements EmployeesDAO {
 
 	@Override
 	public List<Employees> getAllEmployees() {
-		return entityManager.unwrap(Session.class).createQuery("from Employees", Employees.class).getResultList();
-	}
+		//return entityManager.unwrap(Session.class).createQuery("from Employees", Employees.class).getResultList();
+		return entityManager.unwrap(Session.class).createQuery("from Employees",Employees.class).getResultList()
+;	}
 
 	@Override
 	public void addEmployee(Employees employee) {
@@ -30,20 +31,19 @@ public class EmployeesDAOImpl implements EmployeesDAO {
 
 	@Override
 	public void updateEmployee(Employees employee) {
-		// TODO Auto-generated method stub
+		// update has been deprecated
+		entityManager.unwrap(Session.class).merge(employee);
 
 	}
 
 	@Override
-	public void deleteEmployee(int employeeId) {
-		// TODO Auto-generated method stub
-
+	public void deleteEmployee(Employees emp) {
+		entityManager.unwrap(Session.class).remove(emp);
 	}
 
 	@Override
 	public Employees getEmployeeById(int employeeId) {
-		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(Employees.class, employeeId);
 	}
 
 }

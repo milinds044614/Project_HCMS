@@ -39,15 +39,15 @@ public class TrainersDAOimpl implements TrainersDAO {
 	}
 
 	@Override
-	public void deleteTrainer(int trainerId) {
+	public void deleteTrainer(Trainers trainerId) {
 		// TODO Auto-generated method stub
-		
+		entityManager.unwrap(Session.class).remove(trainerId);
 	}
 
 	@Override
 	public Trainers getTrainerById(int trainerId) {
 		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(Trainers.class, trainerId);
 	}
 
 }

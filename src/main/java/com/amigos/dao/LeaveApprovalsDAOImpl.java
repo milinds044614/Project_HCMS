@@ -26,27 +26,27 @@ public class LeaveApprovalsDAOImpl implements LeaveApprovalsDAO {
 	}
 
 	@Override
-	public void addLeaveApprovals(LeaveApprovals LeaveApproval) {
+	public void addLeaveApproval(LeaveApprovals leaveApproval) {
 		// TODO Auto-generated method stub
-		
+		entityManager.unwrap(Session.class).saveOrUpdate(leaveApproval);
 	}
 
 	@Override
-	public void updateLeaveApprovals(LeaveApprovals LeaveApproval) {
+	public void updateLeaveApproval(LeaveApprovals leaveApproval) {
 		// TODO Auto-generated method stub
-		
+		entityManager.unwrap(Session.class).merge(leaveApproval);
 	}
 
 	@Override
-	public void deleteLeaveApprovals(int LeaveApprovalId) {
+	public void deleteLeaveApproval(LeaveApprovals leaveApprovalId) {
 		// TODO Auto-generated method stub
-		
+		entityManager.unwrap(Session.class).remove(leaveApprovalId);
 	}
 
 	@Override
-	public LeaveApprovals getLeaveApprovalsById(int LeaveApprovalId) {
+	public LeaveApprovals getLeaveApprovalById(int leaveApprovalId) {
 		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(LeaveApprovals.class, leaveApprovalId);
 	}
 
 }

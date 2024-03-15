@@ -27,19 +27,19 @@ public class TrainersServiceImple implements TrainersService{
 	@Override
 	public void updateTrainer(Trainers Trainer) {
 		// TODO Auto-generated method stub
-		
+		trainersDAO.updateTrainer(Trainer);
 	}
 
 	@Override
-	public void deleteTrainer(int TrainerId) {
+	public void deleteTrainer(Trainers TrainerId) {
 		// TODO Auto-generated method stub
-		
+		trainersDAO.deleteTrainer(TrainerId);
 	}
 
 	@Override
 	public Trainers getTrainerById(int TrainerId) {
 		// TODO Auto-generated method stub
-		return null;
+		return trainersDAO.getTrainerById(TrainerId);
 	}
 
 }

@@ -28,19 +28,19 @@ public class CandidateProfilesServiceImpl implements CandidateProfilesService{
 	@Override
 	public void updateCandidateProfiles(CandidateProfiles candidate) {
 		// TODO Auto-generated method stub
-		
+		candidateProfilesDAO.updateCandidateProfiles(candidate);
 	}
 
 	@Override
-	public void deleteCandidateProfiles(int candidateId) {
+	public void deleteCandidateProfiles(CandidateProfiles candidateId) {
 		// TODO Auto-generated method stub
-		
+		candidateProfilesDAO.deleteCandidateProfiles(candidateId);
 	}
 
 	@Override
 	public CandidateProfiles getCandidateProfilesById(int candidateId) {
 		// TODO Auto-generated method stub
-		return null;
+		return candidateProfilesDAO.getCandidateProfilesById(candidateId);
 	}
 
 }

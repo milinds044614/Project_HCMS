@@ -25,20 +25,20 @@ public class CertificationsServiceImpl implements CertificationsService {
 
 	@Override
 	public void updateCertifications(Certifications certificate) {
-		// TODO Auto-generated method stub
+		certificationsDAO.updateCertifications(certificate);
 		
 	}
 
 	@Override
-	public void deleteCertifications(int certificateId) {
+	public void deleteCertifications(Certifications certificateId) {
 		// TODO Auto-generated method stub
-		
+		certificationsDAO.deleteCertifications(certificateId);
 	}
 
 	@Override
 	public Certifications getCertificationsById(int certificateId) {
 		// TODO Auto-generated method stub
-		return null;
+		return certificationsDAO.getCertificationsById(certificateId);
 	}
 
 }

@@ -8,11 +8,11 @@ public interface LeaveApprovalsService {
 	
 	List<LeaveApprovals> getAllLeaveApprovals();
 
-	void addLeaveApprovals(LeaveApprovals LeaveApproval);
+	void addLeaveApproval(LeaveApprovals leaveApproval);
 
-	void updateLeaveApprovals(LeaveApprovals LeaveApproval);
+	void updateLeaveApproval(LeaveApprovals leaveApproval);
 
-	void deleteLeaveApprovals(int LeaveApprovalId);
+	void deleteLeaveApproval(LeaveApprovals leaveApprovalId);
 
-	LeaveApprovals getLeaveApprovalsById(int LeaveApprovalId);
+	LeaveApprovals getLeaveApprovalById(int leaveApprovalId);
 }

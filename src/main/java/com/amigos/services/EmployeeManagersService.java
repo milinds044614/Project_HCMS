@@ -7,12 +7,12 @@ import com.amigos.entities.EmployeeManagers;
 public interface EmployeeManagersService {
 	List<EmployeeManagers> getAllEmployeeManagers();
 
-	void addEmployeeManager(EmployeeManagers EmployeeManager);
+	void addEmployeeManager(EmployeeManagers employeeManager);
 
-	void updateEmployeeManager(EmployeeManagers EmployeeManager);
+	void updateEmployeeManager(EmployeeManagers employeeManager);
 
-	void deleteEmployeeManager(int EmployeeManagerId);
+	void deleteEmployeeManager(EmployeeManagers employeeManagerId);
 
-	EmployeeManagers getEmployeeManagerById(int EmployeeManagerId);
+	EmployeeManagers getEmployeeManagerById(int employeeManagerId);
 
 }

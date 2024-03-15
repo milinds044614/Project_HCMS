@@ -25,27 +25,27 @@ public class AppraisalFormsDAOImpl implements AppraisalFormsDAO {
 	}
 
 	@Override
-	public void addAppraisalForms(AppraisalForms Appraisal) {
+	public void addAppraisalForms(AppraisalForms appraisal) {
 		// TODO Auto-generated method stub
-		entityManager.unwrap(Session.class).saveOrUpdate(Appraisal);
+		entityManager.unwrap(Session.class).saveOrUpdate(appraisal);
 	}
 
 	@Override
-	public void updateAppraisalForms(AppraisalForms Appraisal) {
-		// TODO Auto-generated method stub
+	public void updateAppraisalForms(AppraisalForms appraisal) {
+		entityManager.unwrap(Session.class).merge(appraisal);
 		
 	}
 
 	@Override
-	public void deleteAppraisalForms(int AppraisalId) {
-		// TODO Auto-generated method stub
+	public void deleteAppraisalForms(AppraisalForms appraisalId) {
+		entityManager.unwrap(Session.class).remove(appraisalId);
 		
 	}
 
 	@Override
-	public AppraisalForms getAppraisalFormsById(int AppraisalId) {
-		// TODO Auto-generated method stub
-		return null;
+	public AppraisalForms getAppraisalFormsById(int appraisalId) {
+		
+		return entityManager.unwrap(Session.class).get(AppraisalForms.class, appraisalId);
 	}
 
 }

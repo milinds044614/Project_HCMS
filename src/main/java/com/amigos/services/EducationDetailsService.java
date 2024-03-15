@@ -7,11 +7,11 @@ import com.amigos.entities.EducationDetails;
 public interface EducationDetailsService {
 	List<EducationDetails> getAllEducationDetails();
 
-	void addEducationDetails(EducationDetails educationDetails);
+	void addEducationDetail(EducationDetails educationDetails);
 
-	void updateEducationDetails(EducationDetails educationDetails);
+	void updateEducationDetail(EducationDetails educationDetails);
 
-	void deleteEducationDetails(int educationDetailsId);
+	void deleteEducationDetail(EducationDetails educationDetailsId);
 
-	EducationDetails getEducationDetailsById(int educationDetailsId);
+	EducationDetails getEducationDetailById(int educationDetailsId);
 }

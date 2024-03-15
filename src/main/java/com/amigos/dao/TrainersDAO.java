@@ -12,7 +12,7 @@ public interface TrainersDAO {
 
 	void updateTrainer(Trainers trainer);
  
-	void deleteTrainer(int trainerId);
+	void deleteTrainer(Trainers trainerId);
 
 	Trainers getTrainerById(int trainerId);
 }

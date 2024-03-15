@@ -11,7 +11,7 @@ public interface ApplicationStatusService {
 
 	void updateApplicationStatus(ApplicationStatus applicationStatus);
 
-	void deleteApplicationStatus(int applicationStatusId);
+	void deleteApplicationStatus(ApplicationStatus applicationStatus);
 
 	ApplicationStatus getApplicationStatusById(int applicationStatusId);
 

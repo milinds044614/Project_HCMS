@@ -11,7 +11,7 @@ public interface TrainersService {
 
 	void updateTrainer(Trainers Trainer);
 
-	void deleteTrainer(int TrainerId);
+	void deleteTrainer(Trainers TrainerId);
 
 	Trainers getTrainerById(int TrainerId);
 

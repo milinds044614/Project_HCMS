@@ -25,27 +25,27 @@ public class EducationDetailsDAOImpl implements EducationDetailsDAO{
 	}
 
 	@Override
-	public void addEducationDetails(EducationDetails educationDetails) {
+	public void addEducationDetail(EducationDetails educationDetails) {
 		// TODO Auto-generated method stub
 		entityManager.unwrap(Session.class).saveOrUpdate(educationDetails);
 	}
 
 	@Override
-	public void updateEducationDetails(EducationDetails educationDetails) {
-		// TODO Auto-generated method stub
+	public void updateEducationDetail(EducationDetails educationDetails) {
+		entityManager.unwrap(Session.class).merge(educationDetails);
 		
 	}
 
 	@Override
-	public void deleteEducationDetails(int educationDetailsId) {
-		// TODO Auto-generated method stub
+	public void deleteEducationDetail(EducationDetails educationDetailsId) {
+		entityManager.unwrap(Session.class).remove(educationDetailsId);
 		
 	}
 
 	@Override
-	public EducationDetails getEducationDetailsById(int educationDetailsId) {
+	public EducationDetails getEducationDetailById(int educationDetailsId) {
 		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(EducationDetails.class, educationDetailsId);
 	}
 
 }

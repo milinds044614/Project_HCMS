@@ -1,0 +1,17 @@
+package com.amigos.services;
+
+import java.util.List;
+
+import com.amigos.entities.TrainingFeedback;
+
+public interface TrainingFeedbackService {
+	List<TrainingFeedback> getAllTrainingFeedback();
+
+	void addTrainingFeedback(TrainingFeedback trainingFeedback);
+
+	void updateTrainingFeedback(TrainingFeedback trainingFeedback);
+
+	void deleteTrainingFeedback(TrainingFeedback trainingFeedback);
+
+	TrainingFeedback getTrainingFeedbackById(int trainingFeedbackId);
+}

@@ -26,34 +26,29 @@ public class EmployeeManagersDAOImpl implements EmployeeManagersDAO{
 	}
 
 	@Override
-	public void addEmployeeManagers(EmployeeManagers EmployeeManager) {
+	public void addEmployeeManager(EmployeeManagers employeeManager) {
 		// TODO Auto-generated method stub
-		entityManager.unwrap(Session.class).saveOrUpdate(EmployeeManager);
+		entityManager.unwrap(Session.class).saveOrUpdate(employeeManager);
 	}
 
 	@Override
-	public void updateEmployeeManagers(EmployeeManagers EmployeeManager) {
+	public void updateEmployeeManager(EmployeeManagers employeeManager) {
 		// TODO Auto-generated method stub
-		
+		entityManager.unwrap(Session.class).merge(employeeManager);
 	}
 
 	@Override
-	public void deleteEmployeeManagers(int EmployeeManagerId) {
+	public void deleteEmployeeManager(EmployeeManagers employeeManagerId) {
 		// TODO Auto-generated method stub
-		
+		entityManager.unwrap(Session.class).remove(employeeManagerId);
 	}
 
 	@Override
-	public EmployeeManagers getEmployeeManagersById(int EmployeeManagerId) {
+	public EmployeeManagers getEmployeeManagerById(int employeeManagerId) {
 		// TODO Auto-generated method stub
-		return null;
+		return entityManager.unwrap(Session.class).get(EmployeeManagers.class, employeeManagerId);
 	}
 
-	@Override
-	public List<EmployeeManagers> getAllEmployeeManagerManagers() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	
 	
 }

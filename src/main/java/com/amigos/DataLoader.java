@@ -108,14 +108,7 @@ public class DataLoader implements CommandLineRunner {
 		
 		
 		
-		EducationDetails Ed1=new EducationDetails();
-		Ed1.setDegree("BTECh");
-		//Ed1.setEducationId(1);
-		Ed1.setGpa(new BigDecimal("3.45"));
-		Ed1.setGraduationYear(2022);
-		Ed1.setInstitute("DNP COE Sahahada");
-		Ed1.setMajor("aslk;dfj");
-		eudcationDetialsService.addEducationDetails(Ed1);
+		
 		
 		EmployeeManagers Em1=new EmployeeManagers();
 		
@@ -168,6 +161,7 @@ public class DataLoader implements CommandLineRunner {
 
 		employeeService.addEmployee(manager);
 		employeeService.addEmployee(emp1);
+		
 
 	}
 

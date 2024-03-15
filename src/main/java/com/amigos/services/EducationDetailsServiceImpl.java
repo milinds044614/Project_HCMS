@@ -18,27 +18,27 @@ public class EducationDetailsServiceImpl implements EducationDetailsService {
 	}
 
 	@Override
-	public void addEducationDetails(EducationDetails educationDetails) {
+	public void addEducationDetail(EducationDetails educationDetails) {
 		// TODO Auto-generated method stub
-		educationDetialsDAO.addEducationDetails(educationDetails);
+		educationDetialsDAO.addEducationDetail(educationDetails);
 	}
 
 	@Override
-	public void updateEducationDetails(EducationDetails educationDetails) {
-		// TODO Auto-generated method stub
+	public void updateEducationDetail(EducationDetails educationDetails) {
+		educationDetialsDAO.updateEducationDetail(educationDetails);
 		
 	}
 
 	@Override
-	public void deleteEducationDetails(int educationDetailsId) {
-		// TODO Auto-generated method stub
+	public void deleteEducationDetail(EducationDetails educationDetailsId) {
+		educationDetialsDAO.deleteEducationDetail(educationDetailsId);
 		
 	}
 
 	@Override
-	public EducationDetails getEducationDetailsById(int educationDetailsId) {
+	public EducationDetails getEducationDetailById(int educationDetailsId) {
 		// TODO Auto-generated method stub
-		return null;
+		return educationDetialsDAO.getEducationDetailById(educationDetailsId);
 	}
 
 }

@@ -26,20 +26,20 @@ public class AppraisalFormsServiceImpl implements AppraisalFormsService{
 
 	@Override
 	public void updateAppraisalForms(AppraisalForms Appraisal) {
-		// TODO Auto-generated method stub
+		appraisalFormDAO.updateAppraisalForms(Appraisal);
 		
 	}
 
 	@Override
-	public void deleteAppraisalForms(int AppraisalId) {
-		// TODO Auto-generated method stub
+	public void deleteAppraisalForms(AppraisalForms AppraisalId) {
+		appraisalFormDAO.deleteAppraisalForms(AppraisalId);
 		
 	}
 
 	@Override
 	public AppraisalForms getAppraisalFormsById(int AppraisalId) {
 		// TODO Auto-generated method stub
-		return null;
+		return appraisalFormDAO.getAppraisalFormsById(AppraisalId);
 	}
 
 }

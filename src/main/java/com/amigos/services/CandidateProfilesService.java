@@ -12,7 +12,7 @@ public interface CandidateProfilesService {
 
 	void updateCandidateProfiles(CandidateProfiles candidate);
 
-	void deleteCandidateProfiles(int candidateId);
+	void deleteCandidateProfiles(CandidateProfiles candidateId);
 
 	CandidateProfiles getCandidateProfilesById(int candidateId);
 }
